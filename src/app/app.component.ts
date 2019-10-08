@@ -14,52 +14,67 @@ export class AppComponent {
     {
       title: ' A Paróquia',
       url: '/home',
-      icon: 'home'
-    },
-    {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
-    },
-    {
-      title: 'Comunidades',
-      url: '/comunidades',
-      icon: 'list'
-    },
-    {
-      title: 'Agenda',
-      url: '/agenda',
-      icon: 'calendar'
-    },
-    {
-      title: 'Contato',
-      url: '/contato',
-      icon: 'call'
-    },
-    {
-      title: 'Dizimista',
-      url: '/dizimista',
-      icon: 'list'
-    },
-    {
-      title: 'Lojinha',
-      url: '/lojinha',
-      icon: 'list'
-    },{
-      title: 'Missas',
-      url: '/missas',
-      icon: 'list'
-    },
+      icon: 'church', 
+      tipo: 'fas',
+      color: 'azul'
+    }, 
     {
       title: 'Notícias',
       url: '/noticias',
-      icon: 'list'
+      icon: 'newspaper',
+      tipo: 'fas',
+      color: 'azul'
     },
     {
       title: 'Orações',
       url: '/oracoes',
-      icon: 'body'
-    }
+      icon: 'praying-hands',
+      tipo: 'fas',
+      color: 'azul'
+    }, 
+    {
+      title: 'Missas',
+      url: '/missas',
+      icon: 'users',
+      tipo: 'fas',
+      color: 'azul'
+    },  
+    {
+      title: 'Comunidades',
+      url: '/comunidades',
+      icon: 'place-of-worship',
+      tipo: 'fas',
+      color: 'azul'
+    },
+    {
+      title: 'Agenda',
+      url: '/agenda',
+      icon: 'calendar-alt',
+      tipo: 'fas',
+      color: 'azul'
+    },
+    {
+      title: 'Contato',
+      url: '/contato',
+      icon: 'phone-alt',
+      tipo: 'fas',
+      color: 'azul'
+    },
+    {
+      title: 'Dizimista',
+      url: '/dizimista',
+      icon: 'hand-holding-heart',
+      tipo: 'fas',
+      color: 'azul'
+    },
+    {
+      title: 'Lojinha',
+      url: '/lojinha',
+      icon: 'cart-plus',
+      tipo: 'fas',
+      color: 'azul'
+    },       
+   
   ];
 
   constructor(

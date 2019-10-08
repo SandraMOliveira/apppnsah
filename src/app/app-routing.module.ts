@@ -11,14 +11,7 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
-  {
-    path: 'list',
-    loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
-  },
-  { 
-    path: 'comunidades', 
-    loadChildren: './comunidades/comunidades.module#ComunidadesPageModule' 
-  },
+  { path: 'comunidades', loadChildren: './comunidades/comunidades.module#ComunidadesPageModule' },
   { path: 'paroquia', loadChildren: './paroquia/paroquia.module#ParoquiaPageModule' },
   { path: 'noticias', loadChildren: './noticias/noticias.module#NoticiasPageModule' },
   { path: 'oracoes', loadChildren: './oracoes/oracoes.module#OracoesPageModule' },
@@ -26,7 +19,17 @@ const routes: Routes = [
   { path: 'agenda', loadChildren: './agenda/agenda.module#AgendaPageModule' },
   { path: 'lojinha', loadChildren: './lojinha/lojinha.module#LojinhaPageModule' },
   { path: 'dizimista', loadChildren: './dizimista/dizimista.module#DizimistaPageModule' },
-  { path: 'contato', loadChildren: './contato/contato.module#ContatoPageModule' },
+  { path: 'contato', loadChildren: './contato/contato.module#ContatoPageModule' }, 
+  { path: 'lista-produtos', loadChildren: './produtos/lista-produtos/lista-produtos.module#ListaProdutosPageModule' },
+  { path: 'form-endereco', loadChildren: './enderecos/form-endereco/form-endereco.module#FormEnderecoPageModule' },
+  { path: 'lista-endereco', loadChildren: './enderecos/lista-endereco/lista-endereco.module#ListaEnderecoPageModule' },
+  { path: 'form-item-pedido', loadChildren: './pedidos/form-item-pedido/form-item-pedido.module#FormItemPedidoPageModule' },
+  { path: 'lista-item-pedido', loadChildren: './pedidos/lista-item-pedido/lista-item-pedido.module#ListaItemPedidoPageModule' },
+  { path: 'lista-produto-pedido', loadChildren: './pedidos/lista-produto-pedido/lista-produto-pedido.module#ListaProdutoPedidoPageModule' },
+  { path: 'perfil', loadChildren: './usuarios/perfil/perfil.module#PerfilPageModule' },
+  { path: 'criar-conta', loadChildren: './usuarios/criar-conta/criar-conta.module#CriarContaPageModule' },
+  { path: 'esqueci-senha', loadChildren: './usuarios/esqueci-senha/esqueci-senha.module#EsqueciSenhaPageModule' },
+  { path: 'login', loadChildren: './usuarios/login/login.module#LoginPageModule' },
 ];
 
 @NgModule({

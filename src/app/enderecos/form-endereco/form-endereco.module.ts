@@ -5,19 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { LojinhaPage } from './lojinha.page';
-
+import { FormEnderecoPage } from './form-endereco.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: LojinhaPage,
-    children: [
-      {
-        path: 'produtos',
-        loadChildren: '../produtos/lista-produtos/lista-produtos.module#ListaProdutosPageModule'
-      }
-    ]    
+    component: FormEnderecoPage
   }
 ];
 
@@ -28,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [LojinhaPage]
+  declarations: [FormEnderecoPage]
 })
-export class LojinhaPageModule {}
+export class FormEnderecoPageModule {}
