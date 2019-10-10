@@ -16,6 +16,14 @@ const routes: Routes = [
       {
         path: 'produtos',
         loadChildren: '../produtos/lista-produtos/lista-produtos.module#ListaProdutosPageModule'
+      },
+      {
+        path: 'pedidos',
+        loadChildren: '../produtos/lista-produtos/lista-produtos.module#ListaProdutosPageModule'
+      },
+      {
+        path: 'produtos',
+        loadChildren: '../produtos/lista-produtos/lista-produtos.module#ListaProdutosPageModule'
       }
     ]    
   }
