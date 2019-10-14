@@ -5,5 +5,6 @@ import { Injectable } from '@angular/core';
 })
 export class UsuariosService {
 
-  constructor() { }
+  constructor(private afAuth: Ang
+    ) { }
 }

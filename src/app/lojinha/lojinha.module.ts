@@ -22,7 +22,7 @@ const routes: Routes = [
         loadChildren: '../produtos/lista-produtos/lista-produtos.module#ListaProdutosPageModule'
       },
       {
-        path: 'produtos',
+        path: 'usuarios',
         loadChildren: '../produtos/lista-produtos/lista-produtos.module#ListaProdutosPageModule'
       }
     ]    
