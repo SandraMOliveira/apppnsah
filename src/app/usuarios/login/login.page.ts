@@ -1,8 +1,9 @@
+import { ToastService } from './../../core/shared/toast.service';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { UsuariosService } from '../shared/usuarios.service';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Toast } from '@ionic-native/toast';
+
 
 @Component({
   selector: 'app-login',
@@ -12,10 +13,11 @@ import { Toast } from '@ionic-native/toast';
 export class LoginPage implements OnInit {
   formLogin: FormGroup;
 
+  // toast mensagem
   constructor(private formBuilder: FormBuilder,
               private usuarioService: UsuariosService,
               private router: Router,
-              private toast: Toast) { }
+              private toast: ToastService) { }
 
   ngOnInit() {
     this.criarFormulario();
