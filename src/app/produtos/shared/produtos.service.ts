@@ -1,6 +1,7 @@
+import { FirebasePath } from './../../core/firebase-path';
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { FirebasePath } from 'src/app/core/shared/firebase-path';
+
 import { map } from 'rxjs/operators';
 
 @Injectable({
@@ -17,6 +18,7 @@ export class ProdutosService {
       } else {
         return q.orderByChild('nome');
       }
+      // é pra fazer alteração no banco
     }).snapshotChanges().pipe(
       map(changes => {
         return changes.map(m => ({ key: m.payload.key, ...m.payload.val() }));

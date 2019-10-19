@@ -19,13 +19,13 @@ const routes: Routes = [
       },
       {
         path: 'pedidos',
-        loadChildren: '../produtos/lista-produtos/lista-produtos.module#ListaProdutosPageModule'
+        loadChildren: '../pedidos/lista-item-pedido/lista-item-pedido.module#ListaItemPedidoPageModule '
       },
       {
         path: 'usuarios',
-        loadChildren: '../produtos/lista-produtos/lista-produtos.module#ListaProdutosPageModule'
+        loadChildren: '../usuarios/login/login.module#LoginPageModule'
       }
-    ]    
+    ]
   }
 ];
 

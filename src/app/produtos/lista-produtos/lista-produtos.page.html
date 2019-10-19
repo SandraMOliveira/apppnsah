@@ -20,7 +20,8 @@
     </ion-item>
 
     <!--  mostrando produto por produto,  -->
-    <ion-item *ngFor="let produto of produtos | async" (click)="adicionarProduto(produto.key)">
+    <ion-item *ngFor="let produto of produtos | async" >
+    <!-- (click)="adicionarProduto(produto.key)" -->
       <ion-avatar slot="start" *ngIf="produto.img">
         <img [src]="produto.img" />
       </ion-avatar>
@@ -30,7 +31,7 @@
         <pre text-wrap>{{ produto.descricao }}</pre>
         <!-- span html -->
         <!-- <span>{{ produto.preco | currency: 'BRL'}}</span> -->
-        <app-valor [valor]="produto.preco"></app-valor>
+        <!-- <app-valor [valor]="produto.preco"></app-valor> -->
       </ion-label>
     </ion-item>
   </ion-list>

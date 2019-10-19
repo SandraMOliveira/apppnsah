@@ -25,18 +25,19 @@ export class ListaProdutosPage implements OnInit {
     // carregar categorias
     this.categorias = this.produtosService.getCategoriasAll();
     // faz uma consulta e mostra se tem uma quantidade
-    this.carrinhoService.carrinhoPossuiItens().subscribe((existemItens: boolean) =>{
-      this.carrinhoPossuiItens = existemItens;
-    })
-  }
+    // this.carrinhoService.carrinhoPossuiItens().subscribe((existemItens: boolean) =>{
+    //   this.carrinhoPossuiItens = existemItens;
+    }
 
-  buscarProdutos(){
-    this.produtos = this.produtosService.getAll(this.categoriaSelecionada);
-  }
+    buscarProdutos(){
+      this.produtos = this.produtosService.getAll(this.categoriaSelecionada);
+    }
+    
+     //  método para adicionar item no carrinho, quando clica no produto
+    //  adicionarProduto(produtoKey: string){
+    //   this.router.navigate(['pedido/carrinho/novo-item/', produtoKey]);
+    // }
   
-   //  método para adicionar item no carrinho, quando clica no produto
-   adicionarProduto(produtoKey: string){
-    this.router.navigate(['pedido/carrinho/novo-item/', produtoKey]);
   }
 
-}
+  

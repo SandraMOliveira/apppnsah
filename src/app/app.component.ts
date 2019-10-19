@@ -12,12 +12,12 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent {
   public appPages = [
     {
-      title: ' A Paróquia',
+      title: 'A Paróquia',
       url: '/home',
-      icon: 'church', 
+      icon: 'church',
       tipo: 'fas',
       color: 'azul'
-    }, 
+    },
     {
       title: 'Notícias',
       url: '/noticias',
@@ -31,14 +31,14 @@ export class AppComponent {
       icon: 'praying-hands',
       tipo: 'fas',
       color: 'azul'
-    }, 
+    },
     {
       title: 'Missas',
       url: '/missas',
       icon: 'users',
       tipo: 'fas',
       color: 'azul'
-    },  
+    },
     {
       title: 'Comunidades',
       url: '/comunidades',
@@ -73,8 +73,8 @@ export class AppComponent {
       icon: 'cart-plus',
       tipo: 'fas',
       color: 'azul'
-    },       
-   
+    },
+
   ];
 
   constructor(
