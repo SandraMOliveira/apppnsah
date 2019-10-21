@@ -1,8 +1,8 @@
-import { ToastService } from './../../core/shared/toast.service';
 import { Component, OnInit } from '@angular/core';
 import { UsuariosService } from '../shared/usuarios.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastService } from './../../core/shared/toast.service';
 
 
 @Component({

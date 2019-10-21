@@ -1,8 +1,8 @@
 import { CarrinhoService } from './../../pedidos/shared/carrinho.service';
-import { Router } from '@angular/router';
+import { ProdutosService } from '../shared/produtos.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ProdutosService } from '../shared/produtos.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lista-produtos',
