@@ -24,6 +24,11 @@ const routes: Routes = [
       {
         path: 'usuarios',
         loadChildren: '../usuarios/login/login.module#LoginPageModule'
+      },
+      {
+        path: '',
+        redirectTo: '/lojinha/produtos',
+        pathMatch: 'full'
       }
     ]
   }

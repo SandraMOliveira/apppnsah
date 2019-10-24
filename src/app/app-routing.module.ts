@@ -18,6 +18,11 @@ const routes: Routes = [
   { path: 'missas', loadChildren: './missas/missas.module#MissasPageModule' },
   { path: 'agenda', loadChildren: './agenda/agenda.module#AgendaPageModule' },
   { path: 'lojinha', loadChildren: './lojinha/lojinha.module#LojinhaPageModule' },
+  // {
+  //   path: 'lojinha',
+  //   loadChildren: () => import('./lojinha/lojinha.module').then(m => m.LojinhaPageModule)
+  // },
+
   { path: 'dizimista', loadChildren: './dizimista/dizimista.module#DizimistaPageModule' },
   { path: 'contato', loadChildren: './contato/contato.module#ContatoPageModule' }, 
   { path: 'lista-produtos', loadChildren: './produtos/lista-produtos/lista-produtos.module#ListaProdutosPageModule' },
