@@ -24,7 +24,7 @@ const routes: Routes = [
   // },
 
   { path: 'dizimista', loadChildren: './dizimista/dizimista.module#DizimistaPageModule' },
-  { path: 'contato', loadChildren: './contato/contato.module#ContatoPageModule' }, 
+  { path: 'contato', loadChildren: './contato/contato.module#ContatoPageModule' },
   { path: 'lista-produtos', loadChildren: './produtos/lista-produtos/lista-produtos.module#ListaProdutosPageModule' },
   { path: 'form-endereco', loadChildren: './enderecos/form-endereco/form-endereco.module#FormEnderecoPageModule' },
   { path: 'lista-endereco', loadChildren: './enderecos/lista-endereco/lista-endereco.module#ListaEnderecoPageModule' },
@@ -37,6 +37,7 @@ const routes: Routes = [
   { path: 'login', loadChildren: './usuarios/login/login.module#LoginPageModule' },
   { path: 'orar', loadChildren: './orar/orar.module#OrarPageModule' },
   { path: 'meus-pedidos', loadChildren: './meus-pedidos/meus-pedidos.module#MeusPedidosPageModule' },
+
 ];
 
 @NgModule({
@@ -45,4 +46,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

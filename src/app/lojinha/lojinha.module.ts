@@ -10,7 +10,7 @@ import { LojinhaPage } from './lojinha.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: ' ',
     component: LojinhaPage,
     children: [
       {
@@ -29,6 +29,23 @@ const routes: Routes = [
         path: '',
         redirectTo: '/lojinha/produtos',
         pathMatch: 'full'
+      },
+    ]
+  },
+  {
+    path: 'usuarios',
+    children: [
+      {
+        path: 'enderecos',
+        loadChildren: '../enderecos/lista-endereco/lista-endereco.module#ListaEnderecoPageModule'
+      },
+      {
+        path: 'enderecos/novo',
+        loadChildren: '../enderecos/form-endereco/form-endereco.module#FormEnderecoPageModule'
+      },
+      {
+        path: 'enderecos/editar/:key',
+        loadChildren: '../enderecos/form-endereco/form-endereco.module#FormEnderecoPageModule'
       }
     ]
   }
