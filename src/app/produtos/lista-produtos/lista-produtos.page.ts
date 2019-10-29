@@ -32,12 +32,11 @@ export class ListaProdutosPage implements OnInit {
     buscarProdutos(){
       this.produtos = this.produtosService.getAll(this.categoriaSelecionada);
     }
-    
-     //  método para adicionar item no carrinho, quando clica no produto
-    //  adicionarProduto(produtoKey: string){
-    //   this.router.navigate(['pedido/carrinho/novo-item/', produtoKey]);
-    // }
-  
+
+          // método para adicionar item no carrinho, quando clica no produto
+     adicionarProduto(produtoKey: string){
+      this.router.navigate(['pedido/carrinho/novo-item/', produtoKey]);
+    }
+
   }
 
-  

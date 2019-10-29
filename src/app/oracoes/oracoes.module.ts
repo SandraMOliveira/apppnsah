@@ -11,9 +11,8 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 
 library.add(fas, far, fab);
 
-import { IonicModule } from '@ionic/angular';
-
 import { OracoesPage } from './oracoes.page';
+import { SharedModule } from '../core/shared/shared/shared.module';
 
 const routes: Routes = [
   {
@@ -38,7 +37,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,
+    SharedModule,
     FontAwesomeModule,
     RouterModule.forChild(routes)
   ],
