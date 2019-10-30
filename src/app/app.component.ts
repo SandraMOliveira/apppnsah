@@ -10,10 +10,12 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+  rootPage:any = 'HomePage';
+  
   public appPages = [
     {
       title: 'A Paróquia',
-      url: '/home',
+      url: '/paroquia',
       icon: 'church',
       tipo: 'fas',
       color: 'azul'
