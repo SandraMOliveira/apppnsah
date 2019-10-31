@@ -5,31 +5,22 @@ import { Routes, RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
+import { OracoesPageRoutingModule } from './oracoes.router.module';
+
+import { OracoesPage } from './oracoes.page';
+
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 
 library.add(fas, far, fab);
 
-import { OracoesPage } from './oracoes.page';
 import { SharedModule } from '../core/shared/shared/shared.module';
 
 const routes: Routes = [
   {
     path: '',
-    component: OracoesPage,
-    //criando tabs 
-    children: [
-      {
-        path: 'orar',
-        loadChildren: '../orar/orar.module#OrarPageModule'
-      },
-      {
-        path: 'meus-pedidos',
-        loadChildren: '../meus-pedidos/meus-pedidos.module#MeusPedidosPageModule'
-      }
-
-    ]
+    component: OracoesPage
   }
 ];
 
@@ -39,7 +30,7 @@ const routes: Routes = [
     FormsModule,
     SharedModule,
     FontAwesomeModule,
-    RouterModule.forChild(routes)
+    OracoesPageRoutingModule,
   ],
   declarations: [OracoesPage]
 })

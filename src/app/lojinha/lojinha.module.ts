@@ -30,24 +30,24 @@ const routes: Routes = [
         pathMatch: 'full'
       },
     ]
-  },
-  {
-    path: 'usuarios',
-    children: [
-      {
-        path: 'enderecos',
-        loadChildren: '../enderecos/lista-endereco/lista-endereco.module#ListaEnderecoPageModule'
-      },
-      {
-        path: 'enderecos/novo',
-        loadChildren: '../enderecos/form-endereco/form-endereco.module#FormEnderecoPageModule'
-      },
-      {
-        path: 'enderecos/editar/:key',
-        loadChildren: '../enderecos/form-endereco/form-endereco.module#FormEnderecoPageModule'
-      }
-    ]
   }
+  // {
+  //   path: 'usuarios',
+  //   children: [
+  //     {
+  //       path: 'enderecos',
+  //       loadChildren: '../enderecos/lista-endereco/lista-endereco.module#ListaEnderecoPageModule'
+  //     },
+  //     {
+  //       path: 'enderecos/novo',
+  //       loadChildren: '../enderecos/form-endereco/form-endereco.module#FormEnderecoPageModule'
+  //     },
+  //     {
+  //       path: 'enderecos/editar/:key',
+  //       loadChildren: '../enderecos/form-endereco/form-endereco.module#FormEnderecoPageModule'
+  //     }
+  //   ]
+  // }
 ];
 
 @NgModule({
