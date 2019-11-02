@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'comunidades', loadChildren: './comunidades/comunidades.module#ComunidadesPageModule' },
   { path: 'paroquia', loadChildren: './paroquia/paroquia.module#ParoquiaPageModule' },
   { path: 'noticias', loadChildren: './noticias/noticias.module#NoticiasPageModule' },
-  { path: 'oracoes', loadChildren: './oracoes/oracoes.module#OracoesPageModule' },
+  { path: 'app', loadChildren: './oracoes/oracoes.module#OracoesPageModule' },
   { path: 'missas', loadChildren: './missas/missas.module#MissasPageModule' },
   { path: 'agenda', loadChildren: './agenda/agenda.module#AgendaPageModule' },
   { path: 'lojinha', loadChildren: './lojinha/lojinha.module#LojinhaPageModule' },
@@ -29,6 +29,7 @@ const routes: Routes = [
   { path: 'form-endereco', loadChildren: './enderecos/form-endereco/form-endereco.module#FormEnderecoPageModule' },
   { path: 'lista-endereco', loadChildren: './enderecos/lista-endereco/lista-endereco.module#ListaEnderecoPageModule' },
   { path: 'form-item-pedido', loadChildren: './pedidos/form-item-pedido/form-item-pedido.module#FormItemPedidoPageModule' },
+
   { path: 'lista-item-pedido', loadChildren: './pedidos/lista-item-pedido/lista-item-pedido.module#ListaItemPedidoPageModule' },
 
   { path: 'lista-produto-pedido', loadChildren: './pedidos/lista-produto-pedido/lista-produto-pedido.module#ListaProdutoPedidoPageModule' },

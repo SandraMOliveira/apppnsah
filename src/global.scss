@@ -25,12 +25,19 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+
+//import font
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,700&display=swap');
+.font-family{
+    font-family: 'Montserrat', sans-serif;
+}
+
 .azul{
     color: #3880ff;
 }
 
 .roxo{
-    color: darkslateblue;
+    color: rgb(93, 83, 158);
 }
 
 .logo{
@@ -44,4 +51,8 @@
 
 .margem-superior{
     padding-top: 5%;
+}
+
+.header{
+    color: rgb(101, 86, 116);
 }

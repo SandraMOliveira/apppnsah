@@ -1,13 +1,11 @@
+import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { Routes, RouterModule } from '@angular/router';
+// import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
-import { OracoesPageRoutingModule } from './oracoes.router.module';
-
-import { OracoesPage } from './oracoes.page';
+// import { SharedModule } from '../core/shared/shared/shared.module';
 
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
@@ -15,23 +13,29 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 
 library.add(fas, far, fab);
 
-import { SharedModule } from '../core/shared/shared/shared.module';
+import { OracoesPage } from './oracoes.page';
+import { OrarPageModule } from '../orar/orar.module';
+import { OracoesPageRouterModule } from '../pages/Oracoes/oracoes-page-router/oracoes-page-router.module';
+import { MeusPedidosPageModule } from './../meus-pedidos/meus-pedidos.module';
 
-const routes: Routes = [
-  {
-    path: '',
-    component: OracoesPage
-  }
-];
+// const routes: Routes = [
+//   {
+//     path: '',
+//     component: OracoesPage
+//   }
+// ];
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
-    SharedModule,
+    // FormsModule,
+    // SharedModule,
+    IonicModule,
     FontAwesomeModule,
-    OracoesPageRoutingModule,
+    OrarPageModule,
+    MeusPedidosPageModule,
+    OracoesPageRouterModule,
   ],
   declarations: [OracoesPage]
 })
-export class OracoesPageModule {}
+export class OracoesModule {}

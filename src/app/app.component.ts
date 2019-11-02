@@ -18,7 +18,7 @@ export class AppComponent {
       url: '/paroquia',
       icon: 'church',
       tipo: 'fas',
-      color: 'azul'
+      color: 'header'
     },
     {
       title: 'Notícias',

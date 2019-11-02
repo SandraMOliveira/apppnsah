@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-oracoes',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OracoesPage implements OnInit {
 
-  constructor() { }
+  // constructor(private router: Router) { }
+  constructor() {}
 
-  ngOnInit() {
-  }
 
+    ngOnInit() {
+      // this.router.navigate(['/app', 'oracoes' , 'orar']);
+    }
+  
 }
