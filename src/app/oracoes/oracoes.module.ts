@@ -15,7 +15,6 @@ library.add(fas, far, fab);
 
 import { OracoesPage } from './oracoes.page';
 import { OrarPageModule } from '../orar/orar.module';
-import { OracoesPageRouterModule } from '../pages/Oracoes/oracoes-page-router/oracoes-page-router.module';
 import { MeusPedidosPageModule } from './../meus-pedidos/meus-pedidos.module';
 
 // const routes: Routes = [
@@ -33,8 +32,7 @@ import { MeusPedidosPageModule } from './../meus-pedidos/meus-pedidos.module';
     IonicModule,
     FontAwesomeModule,
     OrarPageModule,
-    MeusPedidosPageModule,
-    OracoesPageRouterModule,
+    MeusPedidosPageModule,    
   ],
   declarations: [OracoesPage]
 })

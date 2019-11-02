@@ -1,19 +1,65 @@
 <ion-header>
-  <ion-toolbar color="header">
-      <ion-buttons slot="start">
-          <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-    <ion-title>Contato</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="font-family">Contato</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-card>
-  <ion-card-header>
-    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    <ion-card-title>Card Title</ion-card-title>
-  </ion-card-header>
+<ion-content>
 
-  <ion-card-content>
-  <ion-select>Telefone</ion-select>
-  </ion-card-content>
-</ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle class="azul">Telefone</ion-card-subtitle>
+      <ion-card-title>(19) 3201 - 2659</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+
+      <ion-card-subtitle class="azul">WhatsApp</ion-card-subtitle>
+      <ion-card-title>(19) 99375-6188</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="azul">E-mail</ion-card-title>
+      <ion-card-subtitle>
+        <p>paroquia.auxiliodahumanidade@gmail.com</p>
+      </ion-card-subtitle>
+
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+
+    <form>
+      <ion-item>
+        <fa-icon [icon]="['fas', 'user-alt']" class="azul"></fa-icon>
+        <ion-input type="text" aria-placeholder="Nome">Nome: </ion-input>
+      </ion-item>
+      <ion-item>
+        <fa-icon [icon]="['fas', 'at']" class="azul"></fa-icon>
+        <ion-input type="text" aria-placeholder="Nome">E-mail: </ion-input>
+      </ion-item>
+      <ion-item>
+        <fa-icon [icon]="['fas', 'comment-alt']" class="azul"></fa-icon>
+        <ion-input type="text" aria-placeholder="Nome">Assunto: </ion-input>
+      </ion-item>
+      <ion-item>
+        <fa-icon [icon]="['far', 'edit']" class="azul"></fa-icon>
+        <ion-input type="text" aria-placeholder="Nome">Mensagem: </ion-input>
+      </ion-item>
+      <div margin-vertical>
+        <ion-button color="primary" expand="block" type="submit">Enviar
+          <fa-icon [icon]="['fas', 'paper-plane']"></fa-icon>
+        </ion-button>
+      </div>
+    </form>
+
+  </ion-card>
+
+</ion-content>

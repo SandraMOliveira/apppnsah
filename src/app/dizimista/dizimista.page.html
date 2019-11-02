@@ -1,13 +1,67 @@
 <ion-header>
-  <ion-toolbar color="header">
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Dizimista</ion-title>
+    <ion-title class="font-family">Dizimista</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  
+<ion-content padding>
 
+  <p align="justificy" class="font-family">
+    Seja um dizimista e ajude a nossa Paróquia e as nossas Pastorais, no trabalho de Evangelização e ajuda aos mais
+    carentes.
+  </p>
+  <form [formGroup]="formDizimista" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="stacked">Nome Completo</ion-label>
+      <ion-input type="text" formControlName="nome"></ion-input>
+      <ion-label position="floating">MM/DD/YYYY</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" min="1950-01-01" max="2020-12-31" value="2019-11-02T15:03:46.789"></ion-datetime>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Data de Nascimento</ion-label>
+      <ion-input type="text" formControlName="nasc"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Endereço</ion-label>
+      <ion-input type="text" formControlName="endereco"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Comunidade</ion-label>
+      <ion-input type="text" formControlName="comunidade"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Telefone</ion-label>
+      <ion-input type="text" formControlName="telefone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">E-mail</ion-label>
+      <ion-input type="email" formControlName="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Como gostaria de contribuir?</ion-label>
+      <ion-input type="text" formControlName="contribuir"></ion-input>
+      <ion-select-option value="" [selected]="true">- Escolha -</ion-select-option>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Observações</ion-label>
+      <ion-input type="text" formControlName="obs"></ion-input>
+    </ion-item>
+
+    <div margin-vertical>
+      <ion-button color="primary" expand="block" type="submit">Enviar
+        <fa-icon [icon]="['fas', 'paper-plane']"></fa-icon>
+      </ion-button>
+    </div>
+  </form>
 </ion-content>
