@@ -15,47 +15,59 @@
   </p>
   <form [formGroup]="formDizimista" (ngSubmit)="onSubmit()">
     <ion-item>
-      <ion-label position="stacked">Nome Completo</ion-label>
-      <ion-input type="text" formControlName="nome"></ion-input>
-      <ion-label position="floating">MM/DD/YYYY</ion-label>
-      <ion-datetime displayFormat="MM/DD/YYYY" min="1950-01-01" max="2020-12-31" value="2019-11-02T15:03:46.789"></ion-datetime>
-
+      <!-- <ion-label position="stacked">Nome Completo</ion-label> -->
+      <ion-input type="text" formControlName="nome" placeholder="Nome Completo"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="stacked">Data de Nascimento</ion-label>
-      <ion-input type="text" formControlName="nasc"></ion-input>
+      <ion-input type="text" formControlName="nasc" placeholder="Data de Nascimento">
+        <!-- <ion-label position="floating"></ion-label> -->
+        <ion-datetime displayFormat="MM/DD/YYYY" min="1950-01-01" max="2020-12-31" value=""></ion-datetime>
+      </ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="stacked">Endereço</ion-label>
-      <ion-input type="text" formControlName="endereco"></ion-input>
+      <ion-input type="text" formControlName="endereco" placeholder="Endereço"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="stacked">Comunidade</ion-label>
       <ion-input type="text" formControlName="comunidade"></ion-input>
+      <ion-label>Comunidade</ion-label>
+      <ion-select placeholder="Escolha">
+        <ion-select-option value="1">N. Sra. Auxiliadora</ion-select-option>
+        <ion-select-option value="1">N. Sra. Perpétuo Socorro</ion-select-option>
+        <ion-select-option value="1">Santa Luzia</ion-select-option>
+        <ion-select-option value="1">N. Sra. Aparecida</ion-select-option>
+        <ion-select-option value="1">Sagrado Coração de Jesus</ion-select-option>
+        <ion-select-option value="1">Santa Rita de Cássia</ion-select-option>
+        <ion-select-option value="1">Santo Expedito</ion-select-option>
+        <ion-select-option value="1">Santa Maria Eufrásia</ion-select-option>
+        <ion-select-option value="1">Santa Clara</ion-select-option>
+      </ion-select>
     </ion-item>
 
     <ion-item>
-      <ion-label position="stacked">Telefone</ion-label>
-      <ion-input type="text" formControlName="telefone"></ion-input>
+      <ion-input type="text" formControlName="telefone" placeholder="Telefone"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="stacked">E-mail</ion-label>
-      <ion-input type="email" formControlName="email"></ion-input>
+      <ion-input type="email" formControlName="email" placeholder="E-mail"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="stacked">Como gostaria de contribuir?</ion-label>
-      <ion-input type="text" formControlName="contribuir"></ion-input>
-      <ion-select-option value="" [selected]="true">- Escolha -</ion-select-option>
+      <ion-input type="text" formControlName="contribuir" placeholder="Como gostaria de contribuir?"></ion-input>
+      <!-- <ion-select-option value="" [selected]="true">- Escolha -</ion-select-option> -->
+      <!-- <ion-select-option value="Crédito - Visa">na Secretaria</ion-select-option>
+      <ion-select-option value="Crédito - Mastercard">em sua casa pelo Agente da Pastoral</ion-select-option> -->
+      <ion-label>Como gostaria de contribuir?</ion-label>
+      <ion-select placeholder="Escolha">
+        <ion-select-option value="1">na Secretaria</ion-select-option>
+        <ion-select-option value="2">em sua casa pelo Agente da Pastoral</ion-select-option>
+      </ion-select>
     </ion-item>
 
     <ion-item>
-      <ion-label position="stacked">Observações</ion-label>
-      <ion-input type="text" formControlName="obs"></ion-input>
+      <ion-input type="text" formControlName="obs" placeholder="Observações"></ion-input>
     </ion-item>
 
     <div margin-vertical>
