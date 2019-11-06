@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { ToastService } from '../core/shared/toast.service';
 import { Router } from '@angular/router';
+import { DizimistaService } from './shared/dizimista.service';
 
 @Component({
   selector: 'app-dizimista',
@@ -13,7 +14,8 @@ export class DizimistaPage implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
               private toast: ToastService,
-              private router: Router,) { }
+              private router: Router,
+              private dizimistaservice: DizimistaService) { }
 
   ngOnInit() {
     this.criarFormulario();
@@ -27,7 +29,7 @@ export class DizimistaPage implements OnInit {
   get email() { return this .formDizimista.get('email'); }
   get contribuir() { return this .formDizimista.get('contribuir'); }
   get obs() { return this .formDizimista.get('obs'); }
- 
+
 
   criarFormulario() {
     this .formDizimista = this .formBuilder.group({
@@ -45,9 +47,9 @@ export class DizimistaPage implements OnInit {
 
   // onSubmit() {
   //   if (this.formDizimista.valid) {
-  //     this.usuariosService.criarConta(this.formDizimista.value)
+  //     this.dizimistaservice.criarCadastro(this.formDizimista.value)
   //      .then( () => {
-  //         this.toast.show('Sua conta foi criada com sucesso. Verifique seu e-mail');
+  //         this.toast.show('Sua cadastro foi realizado com sucesso.');
   //         this.router.navigate(['/']);
   //       })
   //       .catch(mensagem => {
