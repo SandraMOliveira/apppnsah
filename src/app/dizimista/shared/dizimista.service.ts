@@ -1,3 +1,4 @@
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Injectable } from '@angular/core';
 
@@ -5,10 +6,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DizimistaService {
+  dizimistaRef: AngularFireList<any>;
 
-  constructor(private afAuth: AngularFireAuth) { }
+  constructor(private db: AngularFireDatabase,
+              private afAuth: AngularFireAuth) { }
 
   criarCadastro(usuario: any) {
-
+    return this.dizimistaRef.push(usuario);
   }
 }
