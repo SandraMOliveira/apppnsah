@@ -13,9 +13,9 @@ export class DizimistaPage implements OnInit {
   formDizimista: FormGroup;
 
   constructor(private formBuilder: FormBuilder,
-    private toast: ToastService,
-    private router: Router,
-    private dizimistaservice: DizimistaService) { }
+              private toast: ToastService,
+              private router: Router,
+              private dizimistaservice: DizimistaService) { }
 
   ngOnInit() {
     this.criarFormulario();
@@ -52,4 +52,5 @@ export class DizimistaPage implements OnInit {
     this.router.navigate(['dizimista']);
     this.toast.show('Cadastro realizado com sucesso!');
   }
+
 }
