@@ -11,7 +11,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 export class AppComponent {
   rootPage:any = 'HomePage';
-  
+
   public appPages = [
     {
       title: 'A Paróquia',
@@ -73,6 +73,13 @@ export class AppComponent {
       title: 'Lojinha',
       url: '/lojinha',
       icon: 'cart-plus',
+      tipo: 'fas',
+      color: 'azul'
+    },
+    {
+      title: 'Tabs',
+      url: '/tabs',
+      icon: 'newspaper',
       tipo: 'fas',
       color: 'azul'
     },

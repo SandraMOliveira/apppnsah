@@ -14,8 +14,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 library.add(fas, far, fab);
 
 import { OracoesPage } from './oracoes.page';
-import { OrarPageModule } from '../orar/orar.module';
-import { MeusPedidosPageModule } from './../meus-pedidos/meus-pedidos.module';
+import { OracoesPageRouterModule } from './oracoes.router.module';
 
 // const routes: Routes = [
 //   {
@@ -31,8 +30,8 @@ import { MeusPedidosPageModule } from './../meus-pedidos/meus-pedidos.module';
     // SharedModule,
     IonicModule,
     FontAwesomeModule,
-    OrarPageModule,
-    MeusPedidosPageModule,    
+    OracoesPageRouterModule
+
   ],
   declarations: [OracoesPage]
 })

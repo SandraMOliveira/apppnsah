@@ -34,8 +34,10 @@ export class ContatoPage implements OnInit {
 
   onSubmit() {
     if (this.formContato.value) {
-      this.contatoService.inserir
+      this.contatoService.inserir(this.formContato.value);
     }
+    this.router.navigate(['contato']);
+    this.toast.show('Em breve, retornaremos o seu contato')
   }
 
 

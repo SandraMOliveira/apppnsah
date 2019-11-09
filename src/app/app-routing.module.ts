@@ -37,6 +37,10 @@ const routes: Routes = [
   { path: 'criar-conta', loadChildren: './usuarios/criar-conta/criar-conta.module#CriarContaPageModule' },
   { path: 'esqueci-senha', loadChildren: './usuarios/esqueci-senha/esqueci-senha.module#EsqueciSenhaPageModule' },
   { path: 'login', loadChildren: './usuarios/login/login.module#LoginPageModule' },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  }
   // { path: 'orar', loadChildren: './orar/orar.module#OrarPageModule' },
   // { path: 'meus-pedidos', loadChildren: './meus-pedidos/meus-pedidos.module#MeusPedidosPageModule' },
 

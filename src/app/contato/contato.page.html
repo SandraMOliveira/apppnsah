@@ -36,30 +36,54 @@
 
   <ion-card>
 
-    <form>
+    <!-- <form [formGroup]="formContato" (ngSubmit)="onSubmit()">
       <ion-item>
         <fa-icon [icon]="['fas', 'user-alt']" class="azul"></fa-icon>
-        <ion-input type="text" aria-placeholder="Nome">Nome: </ion-input>
+        <ion-input type="text" formControlName="Nome" placeholder="Nome"></ion-input> 
       </ion-item>
       <ion-item>
         <fa-icon [icon]="['fas', 'at']" class="azul"></fa-icon>
-        <ion-input type="text" aria-placeholder="Nome">E-mail: </ion-input>
+        <ion-input type="text" formControlName="E-mail" placeholder="E-mail"></ion-input>
       </ion-item>
       <ion-item>
         <fa-icon [icon]="['fas', 'comment-alt']" class="azul"></fa-icon>
-        <ion-input type="text" aria-placeholder="Nome">Assunto: </ion-input>
+        <ion-input type="text" formControlName="assunto" placeholder="Assunto"></ion-input>
       </ion-item>
       <ion-item>
         <fa-icon [icon]="['far', 'edit']" class="azul"></fa-icon>
-        <ion-input type="text" aria-placeholder="Nome">Mensagem: </ion-input>
+        <ion-input type="text" formControlName="mensagem" placeholder="Mensagem"></ion-input>
       </ion-item>
       <div margin-vertical>
         <ion-button color="primary" expand="block" type="submit">Enviar
           <fa-icon [icon]="['fas', 'paper-plane']"></fa-icon>
         </ion-button>
       </div>
-    </form>
+    </form> -->
+    <form [formGroup]="formContato" (ngSubmit)="onSubmit()">
+      <ion-item>
+        <fa-icon [icon]="['fas', 'user-alt']" class="azul"></fa-icon>
+        <ion-input type="text" formControlName="nome" placeholder="Nome"></ion-input>       
+      </ion-item>
+  
+      <ion-item>
+        <fa-icon [icon]="['fas', 'comment-alt']" class="azul"></fa-icon>
+        <ion-input type="email" formControlName="email" placeholder="E-mail"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <fa-icon [icon]="['fas', 'comment-alt']" class="azul"></fa-icon>
+        <ion-input type="text" formControlName="assunto" placeholder="Assunto"></ion-input>
+      </ion-item>
 
+      <ion-item>
+        <fa-icon [icon]="['far', 'edit']" class="azul"></fa-icon>
+        <ion-input type="text" formControlName="mensagem" placeholder="Mensagem"></ion-input>
+      </ion-item>
+  
+      <div margin-vertical>
+        <ion-button color="primary" expand="block" type="submit">Enviar</ion-button>
+      </div>
+    </form>
   </ion-card>
 
 </ion-content>
