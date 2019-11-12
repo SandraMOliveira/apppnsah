@@ -29,12 +29,11 @@ const routes: Routes = [
             }
         ]
       },
-      {
-        path: '',
-        redirectTo: '/oracoes/orar',
-        pathMatch: 'full'
-      }
-
+      // {
+      //   path: '',
+      //   redirectTo: '/oracoes/orar',
+      //   pathMatch: 'full'
+      // }
     ]
   },
   {

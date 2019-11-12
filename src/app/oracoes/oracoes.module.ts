@@ -35,4 +35,4 @@ import { OracoesPageRoutingModule } from './oracoes-routing.module';
   ],
   declarations: [OracoesPage]
 })
-export class OracoesModule {}
+export class OracoesPageModule {}
