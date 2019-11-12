@@ -14,7 +14,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 library.add(fas, far, fab);
 
 import { OracoesPage } from './oracoes.page';
-import { OracoesPageRouterModule } from './oracoes.router.module';
+import { OracoesPageRoutingModule } from './oracoes-routing.module';
 
 // const routes: Routes = [
 //   {
@@ -30,7 +30,7 @@ import { OracoesPageRouterModule } from './oracoes.router.module';
     // SharedModule,
     IonicModule,
     FontAwesomeModule,
-    OracoesPageRouterModule
+    OracoesPageRoutingModule
 
   ],
   declarations: [OracoesPage]

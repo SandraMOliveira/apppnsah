@@ -4,7 +4,7 @@ import { OracoesPage } from './oracoes.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'oracoes',
     component: OracoesPage,
     //criando tabs 
     children: [
@@ -12,16 +12,22 @@ const routes: Routes = [
         path: 'orar',
         children: [
           {
-            path: 'orar',
-            loadChildren: () => import('../orar/orar.module').then(m => m.OrarPageModule)
+            path: '',
+            loadChildren: () =>
+              import('../orar/orar.module').then(m => m.OrarPageModule)
             // loadChildren: '../orar/orar.module#OrarPageModule'
           }
         ]
       },
       {
         path: 'meus-pedidos',
-        loadChildren: () => import('../meus-pedidos/meus-pedidos.module').then(m => m.MeusPedidosPageModule)
-        // loadChildren: '../meus-pedidos/meus-pedidos.module#MeusPedidosPageModule'
+        children : [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../meus-pedidos/meus-pedidos.module').then(m => m.MeusPedidosPageModule)          
+            }
+        ]
       },
       {
         path: '',
@@ -30,13 +36,17 @@ const routes: Routes = [
       }
 
     ]
-  } 
+  },
+  {
+    path: '',
+    redirectTo: '/oracoes/orar',
+    pathMatch: 'full'
+  }
 ];
 
 
 @NgModule({
-  declarations: [],
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class OracoesPageRouterModule { }
+export class OracoesPageRoutingModule { }

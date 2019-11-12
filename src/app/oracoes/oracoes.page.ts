@@ -1,19 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-oracoes',
   templateUrl: './oracoes.page.html',
   styleUrls: ['./oracoes.page.scss'],
 })
-export class OracoesPage implements OnInit {
+export class OracoesPage {
 
-  // constructor(private router: Router) { }
   constructor() {}
 
-
-    ngOnInit() {
-      // this.router.navigate(['/app', 'oracoes' , 'orar']);
-    }
-  
 }
