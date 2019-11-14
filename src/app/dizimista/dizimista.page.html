@@ -21,7 +21,6 @@
 
     <ion-item>
       <ion-input type="text" formControlName="nasc" placeholder="Data de Nascimento">
-        <!-- <ion-label position="floating"></ion-label> -->
         <ion-datetime displayFormat="MM/DD/YYYY" min="1950-01-01" max="2020-12-31" value=""></ion-datetime>
       </ion-input>
     </ion-item>
@@ -31,9 +30,8 @@
     </ion-item>
 
     <ion-item>
-      <ion-input type="text" formControlName="comunidade"></ion-input>
-      <ion-label>Comunidade</ion-label>
-      <ion-select placeholder="Escolha">
+      <ion-input type="text" formControlName="comunidade" placeholder="Comunidade"></ion-input>
+      <ion-select >
         <ion-select-option value="1">N. Sra. Auxiliadora</ion-select-option>
         <ion-select-option value="2">N. Sra. Perpétuo Socorro</ion-select-option>
         <ion-select-option value="3">Santa Luzia</ion-select-option>
@@ -56,11 +54,8 @@
 
     <ion-item>
       <ion-input type="text" formControlName="contribuir" placeholder="Como gostaria de contribuir?"></ion-input>
-      <!-- <ion-select-option value="" [selected]="true">- Escolha -</ion-select-option> -->
-      <!-- <ion-select-option value="Crédito - Visa">na Secretaria</ion-select-option>
-      <ion-select-option value="Crédito - Mastercard">em sua casa pelo Agente da Pastoral</ion-select-option> -->
-      <ion-label>Como gostaria de contribuir?</ion-label>
-      <ion-select placeholder="Escolha">
+      <!-- <ion-label>Como gostaria de contribuir?</ion-label> -->
+      <ion-select>
         <ion-select-option value="1">na Secretaria</ion-select-option>
         <ion-select-option value="2">em sua casa pelo Agente da Pastoral</ion-select-option>
       </ion-select>

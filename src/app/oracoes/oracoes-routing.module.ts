@@ -4,9 +4,9 @@ import { OracoesPage } from './oracoes.page';
 
 const routes: Routes = [
   {
-    path: 'oracoes',
+    path: '',
     component: OracoesPage,
-    //criando tabs 
+
     children: [
       {
         path: 'orar',
@@ -15,7 +15,6 @@ const routes: Routes = [
             path: '',
             loadChildren: () =>
               import('../orar/orar.module').then(m => m.OrarPageModule)
-            // loadChildren: '../orar/orar.module#OrarPageModule'
           }
         ]
       },
@@ -25,15 +24,15 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../meus-pedidos/meus-pedidos.module').then(m => m.MeusPedidosPageModule)          
+              import('../meus-pedidos/meus-pedidos.module').then(m => m.MeusPedidosPageModule)
             }
         ]
       },
-      // {
-      //   path: '',
-      //   redirectTo: '/oracoes/orar',
-      //   pathMatch: 'full'
-      // }
+      {
+        path: '',
+        redirectTo: '/oracoes/orar',
+        pathMatch: 'full'
+      }
     ]
   },
   {

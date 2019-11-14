@@ -1,9 +1,44 @@
 <ion-header>
-  <ion-toolbar color="header">
-    <ion-title>meus-pedidos</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="font-family">Pedir Orações</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+
+  <p align="justificy" class="font-family">
+    Faça seu pedido, ele será levado nas intenções da próxima Missa ou Celebração da Palavra. Deus o abençoe!
+  </p>
+
+  <form [formGroup]="formPedidosOracoes" (ngSubmit)="onSubmit()" >
+      <ion-item>
+          <ion-input type="text" formControlName="nome" placeholder="Nome Completo"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input type="text" formControlName="tipo" placeholder="Tipo de Oração"></ion-input>
+            <ion-select >
+                <ion-select-option value="1">Ação de Graças</ion-select-option>
+                <ion-select-option value="2">Pela Saúde</ion-select-option>
+                <ion-select-option value="3">Pelo Aniversariante</ion-select-option>
+                <ion-select-option value="4">Falecimento</ion-select-option>
+                <ion-select-option value="5">outra</ion-select-option>
+              </ion-select>
+
+          </ion-item>
+
+          <ion-item>
+              <ion-input type="text" formControlName="pedido" placeholder="Faça seu pedido"></ion-input>
+            </ion-item>
+
+            <div margin-vertical>
+                <ion-button color="primary" expand="block" type="submit">Enviar
+                  <fa-icon [icon]="['fas', 'paper-plane']"></fa-icon>
+                </ion-button>
+              </div>
+  </form>
 
 </ion-content>
