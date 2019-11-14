@@ -12,6 +12,13 @@ import { MeusPedidosService } from './shared/meus-pedidos.service';
 
 export class MeusPedidosPage implements OnInit {
   formPedidosOracoes: FormGroup;
+  TIPO: Array<any> = [
+    { valor: MeusPedidosService.TIPO_ORACAO.ACAO_DE_GRACAS, descricao: 'Ação de Graças'},
+    { valor: MeusPedidosService.TIPO_ORACAO.PELA_SAUDE, descricao: 'Pela Saúde'},
+    { valor: MeusPedidosService.TIPO_ORACAO.PELO_ANIVERSARIANTE, descricao: 'Pelo Aniversariante'},
+    { valor: MeusPedidosService.TIPO_ORACAO.FALECIMENTO, descricao: 'Falecimento'},
+    { valor: MeusPedidosService.TIPO_ORACAO.OUTRA, descricao: 'outra'},
+  ];
 
   constructor(private formbuilder: FormBuilder,
               private toast: ToastService,

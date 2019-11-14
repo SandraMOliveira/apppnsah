@@ -6,11 +6,20 @@ import { AngularFireList, AngularFireDatabase } from '@angular/fire/database';
   providedIn: 'root'
 })
 export class MeusPedidosService {
+
   pedidoRef: AngularFireList<any>;
+
+  public static TIPO_ORACAO = {
+    ACAO_DE_GRACAS: 1,
+    PELA_SAUDE: 2,
+    PELO_ANIVERSARIANTE: 3,
+    FALECIMENTO: 4,
+    OUTRA: 5
+  };
 
   constructor(private db: AngularFireDatabase,
               private afAuth: AngularFireAuth) {
-    this.pedidoRef = this.db.list('meus-pedidos/')
+              this.pedidoRef = this.db.list('meus-pedidos/')
   }
 
   inserirPedidos(usuario: any) {
