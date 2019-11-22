@@ -6,6 +6,7 @@ const routes: Routes = [
     {
         path: '',
         component: LojinhaPage,
+
         children: [
             {
                 path: 'produtos',

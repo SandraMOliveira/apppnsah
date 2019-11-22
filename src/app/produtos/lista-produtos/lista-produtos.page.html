@@ -1,8 +1,12 @@
 <ion-header>
-  <ion-toolbar color="header">
-    <ion-title>Produtos</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="font-family">Produtos</ion-title>
   </ion-toolbar>
 </ion-header>
+
 
 <ion-content padding>
   <ion-list>
@@ -20,17 +24,17 @@
     </ion-item>
 
     <!--  mostrando produto por produto,  -->
-    <ion-item *ngFor="let produto of produtos | async" (click)="adicionarProduto(produto.key)">  
-      <ion-avatar slot="start" *ngIf="produto.img">
-        <img [src]="produto.img" />
-      </ion-avatar>
+    <ion-item *ngFor="let produto of produtos | async" (click)="adicionarProduto(produto.key)">
+      <!-- <ion-avatar > -->
+        <img [src]="produto.img" slot="start" *ngIf="produto.img" class="tamanhofoto" />
+      <!-- </ion-avatar> -->
       <ion-label text-wrap>
         <h1>{{ produto.nome }}</h1>
         <h2>{{ produto.categoriaNome }}</h2>
         <pre text-wrap>{{ produto.descricao }}</pre>
         <!-- span html -->
-        <span>{{ produto.preco | currency: 'BRL'}}</span>
-        <!-- <app-valor [valor]="produto.preco"></app-valor> -->
+        <!-- <span>{{ produto.preco | currency: 'BRL'}}</span> -->
+        <app-valor [valor]="produto.preco"></app-valor>
       </ion-label>
     </ion-item>
   </ion-list>

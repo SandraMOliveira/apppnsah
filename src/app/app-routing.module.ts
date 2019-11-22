@@ -19,7 +19,7 @@ const routes: Routes = [
 
   { path: 'missas', loadChildren: './missas/missas.module#MissasPageModule' },
   { path: 'agenda', loadChildren: './agenda/agenda.module#AgendaPageModule' },
-  // { path: 'lojinha', loadChildren: './lojinha/lojinha.module#LojinhaPageModule' },
+  { path: 'lojinha', loadChildren: './lojinha/lojinha.module#LojinhaPageModule' },
 
   { path: 'dizimista', loadChildren: './dizimista/dizimista.module#DizimistaPageModule' },
   { path: 'contato', loadChildren: './contato/contato.module#ContatoPageModule' },
@@ -35,10 +35,6 @@ const routes: Routes = [
   { path: 'login', loadChildren: './usuarios/login/login.module#LoginPageModule' },
   { path: 'lista-pedido', loadChildren: './pedidos/lista-pedido/lista-pedido.module#ListaPedidoPageModule' },
   { path: 'form-pagamento', loadChildren: './pedidos/form-pagamento/form-pagamento.module#FormPagamentoPageModule' },
-
-  // { path: 'oracoes', loadChildren: './orar/orar.module#OrarPageModule' },
-  // { path: 'meus-pedidos', loadChildren: './meus-pedidos/meus-pedidos.module#MeusPedidosPageModule' },
-
 ];
 
 @NgModule({

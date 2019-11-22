@@ -6,12 +6,12 @@ import { Router } from '@angular/router';
   templateUrl: './lojinha.page.html',
   styleUrls: ['./lojinha.page.scss'],
 })
-export class LojinhaPage implements OnInit {
+export class LojinhaPage {
 
-  constructor(private router: Router) { }
+  constructor() { }
 
-  ngOnInit() {
-    this.router.navigate(['produtos']);
-  }
+  // ngOnInit() {
+  //   this.router.navigate(['produtos']);
+  // }
 
 }
