@@ -14,6 +14,13 @@ export class AppComponent {
 
   public appPages = [
     {
+      title: 'Home',
+      url: '/home',
+      icon: 'newspaper',
+      tipo: 'fas',
+      color: 'azul'
+    },
+    {
       title: 'A Paróquia',
       url: '/paroquia',
       icon: 'church',
@@ -73,13 +80,6 @@ export class AppComponent {
       title: 'Lojinha',
       url: '/lojinha',
       icon: 'cart-plus',
-      tipo: 'fas',
-      color: 'azul'
-    },
-    {
-      title: 'Tabs',
-      url: '/tabs',
-      icon: 'newspaper',
       tipo: 'fas',
       color: 'azul'
     },

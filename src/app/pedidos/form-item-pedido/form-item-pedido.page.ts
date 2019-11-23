@@ -88,7 +88,7 @@ export class FormItemPedidoPage implements OnInit {
         // se deu certo (then)
         .then( () => {
           this.toast.show('Produto adicionado com sucesso!!!');
-          this.router.navigate(['/tabs/produtos']);
+          this.router.navigate(['/lojinha/produtos']);
         })
       }
 

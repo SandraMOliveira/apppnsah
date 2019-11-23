@@ -10,8 +10,4 @@ export class LojinhaPage {
 
   constructor() { }
 
-  // ngOnInit() {
-  //   this.router.navigate(['produtos']);
-  // }
-
 }

@@ -3,63 +3,67 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 const routes: Routes = [
-    {
-        path: '',
-        component: LojinhaPage,
+  {
+    path: '',
+    component: LojinhaPage,
 
-        children: [
-            {
-                path: 'produtos',
-                children: [
-                   {
-                       path: '',
-                       loadChildren: () =>
-                       import('../produtos/lista-produtos/lista-produtos.module').then(m => m.ListaProdutosPageModule)
-                   }
-                ]
-            },
-            {
-                path: 'pedidos',
-                children: [
-                   {
-                       path: '',
-                       loadChildren: () =>
-                       import('../pedidos/lista-pedido/lista-pedido.module').then(m => m.ListaPedidoPageModule)
-                   }
-                ]
-            },
-            {
-                path: 'perfil',
-                children: [
-                   {
-                       path: '',
-                       loadChildren: () =>
-                       import('../usuarios/perfil/perfil.module').then(m => m.PerfilPageModule)
-                   }
-                ]
-            },
-
-        ]
-    },
-    {
-        path: 'usuarios',
+    children: [
+      {
+        path: 'produtos',
         children: [
           {
-            path: 'enderecos',
-            loadChildren: '../enderecos/lista-endereco/lista-endereco.module#ListaEnderecoPageModule'
-          },
-          {
-            path: 'enderecos/novo',
-            loadChildren: '../enderecos/form-endereco/form-endereco.module#FormEnderecoPageModule'
-          },
-          {
-            path: 'enderecos/editar/:key',
-            loadChildren: '../enderecos/form-endereco/form-endereco.module#FormEnderecoPageModule'
+            path: '',
+            loadChildren: () =>
+              import('../produtos/lista-produtos/lista-produtos.module').then(m => m.ListaProdutosPageModule)
           }
         ]
       },
- // criando rota para carrinho
- {
+      {
+        path: 'pedidos',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../pedidos/lista-pedido/lista-pedido.module').then(m => m.ListaPedidoPageModule)
+          }
+        ]
+      },
+      {
+        path: 'perfil',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../usuarios/perfil/perfil.module').then(m => m.PerfilPageModule)
+          }
+        ]
+      },
+      {
+        path: '',
+        redirectTo: '/lojinha/produtos',
+        pathMatch: 'full'
+      },
+    ]
+  },
+  {
+    path: 'usuarios',
+    children: [
+      {
+        path: 'enderecos',
+        loadChildren: '../enderecos/lista-endereco/lista-endereco.module#ListaEnderecoPageModule'
+      },
+      {
+        path: 'enderecos/novo',
+        loadChildren: '../enderecos/form-endereco/form-endereco.module#FormEnderecoPageModule'
+      },
+      {
+        path: 'enderecos/editar/:key',
+        loadChildren: '../enderecos/form-endereco/form-endereco.module#FormEnderecoPageModule'
+      }
+    ]
+  },
+  // criando rota para carrinho
+  {
     path: 'pedido',
     children: [
       {
@@ -91,7 +95,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-    imports: [RouterModule.forChild(routes)],
-    exports: [RouterModule]
-  })
-  export class LojinhaPageRoutingModule {}
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class LojinhaPageRoutingModule { }

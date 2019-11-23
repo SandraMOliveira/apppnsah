@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+import { LojinhaPage } from './lojinha.page';
 import { LojinhaPageRoutingModule } from './lojinha-routing.module';
 
-import { LojinhaPage } from './lojinha.page';
 
 @NgModule({
   imports: [

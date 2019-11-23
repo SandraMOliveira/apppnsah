@@ -14,13 +14,8 @@ const routes: Routes = [
   { path: 'comunidades', loadChildren: './comunidades/comunidades.module#ComunidadesPageModule' },
   { path: 'paroquia', loadChildren: './paroquia/paroquia.module#ParoquiaPageModule' },
   { path: 'noticias', loadChildren: './noticias/noticias.module#NoticiasPageModule' },
-
-  { path: 'oracoes', loadChildren: './oracoes/oracoes.module#OracoesPageModule' },
-
   { path: 'missas', loadChildren: './missas/missas.module#MissasPageModule' },
   { path: 'agenda', loadChildren: './agenda/agenda.module#AgendaPageModule' },
-  { path: 'lojinha', loadChildren: './lojinha/lojinha.module#LojinhaPageModule' },
-
   { path: 'dizimista', loadChildren: './dizimista/dizimista.module#DizimistaPageModule' },
   { path: 'contato', loadChildren: './contato/contato.module#ContatoPageModule' },
   { path: 'lista-produtos', loadChildren: './produtos/lista-produtos/lista-produtos.module#ListaProdutosPageModule' },
@@ -35,6 +30,12 @@ const routes: Routes = [
   { path: 'login', loadChildren: './usuarios/login/login.module#LoginPageModule' },
   { path: 'lista-pedido', loadChildren: './pedidos/lista-pedido/lista-pedido.module#ListaPedidoPageModule' },
   { path: 'form-pagamento', loadChildren: './pedidos/form-pagamento/form-pagamento.module#FormPagamentoPageModule' },
+  { path: 'lojinha',
+      loadChildren: './lojinha/lojinha.module#LojinhaPageModule'
+  },
+  { path: 'oracoes',
+    loadChildren: './oracoes/oracoes.module#OracoesPageModule'
+  },
 ];
 
 @NgModule({

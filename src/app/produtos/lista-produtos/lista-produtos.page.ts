@@ -36,7 +36,7 @@ export class ListaProdutosPage implements OnInit {
 
   // método para adicionar item no carrinho, quando clica no produto
   adicionarProduto(produtoKey: string) {
-    this.router.navigate(['pedido/carrinho/novo-item/', produtoKey]);
+    this.router.navigate(['/pedido/carrinho/novo-item/', produtoKey]);
   }
 
 }
