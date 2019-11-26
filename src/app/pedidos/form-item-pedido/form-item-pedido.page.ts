@@ -1,9 +1,9 @@
-import { ToastService } from './../../core/shared/toast.service';
 import { CarrinhoService } from './../shared/carrinho.service';
-import { Router, ActivatedRoute } from '@angular/router';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { Component, OnInit } from '@angular/core';
 import { ProdutosService } from 'src/app/produtos/shared/produtos.service';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router, ActivatedRoute } from '@angular/router';
+import { ToastService } from './../../core/shared/toast.service';
 
 @Component({
   selector: 'app-form-item-pedido',
