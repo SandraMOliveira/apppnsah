@@ -12,6 +12,7 @@ export class DizimistaService {
               private afAuth: AngularFireAuth) { }
 
   criarCadastro(usuario: any) {
+    this.dizimistaRef = this.db.list('dizimista/');
     return this.dizimistaRef.push(usuario);
   }
 }

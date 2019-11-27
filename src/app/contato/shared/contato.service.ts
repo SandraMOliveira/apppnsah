@@ -9,11 +9,14 @@ export class ContatoService {
   contatoRef: AngularFireList<any>;
 
   constructor(private db: AngularFireDatabase,
-              private afAuth: AngularFireAuth) {
-                this.contatoRef = this.db.list('contato/')
-               }
+              private afAuth: AngularFireAuth) { }
 
   inserir(usuario: any) {
+    this.contatoRef = this.db.list('contato/')
     return this.contatoRef.push(usuario);
   }
+
+  // clear(){
+  //   return this.contatoRef().remove();
+  // }
 }

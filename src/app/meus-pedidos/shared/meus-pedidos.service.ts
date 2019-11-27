@@ -6,7 +6,6 @@ import { AngularFireList, AngularFireDatabase } from '@angular/fire/database';
   providedIn: 'root'
 })
 export class MeusPedidosService {
-
   pedidoRef: AngularFireList<any>;
 
   public static TIPO_ORACAO = {
@@ -19,9 +18,12 @@ export class MeusPedidosService {
 
   constructor(private db: AngularFireDatabase,
               private afAuth: AngularFireAuth) {
-              this.pedidoRef = this.db.list('meus-pedidos/')
+    this.pedidoRef = this.db.list('meus-pedidos/')
   }
 
+
+
+    // insert para inserir os dados do form no firebase
   inserirPedidos(usuario: any) {
     return this.pedidoRef.push(usuario);
   }

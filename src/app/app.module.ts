@@ -13,6 +13,7 @@ import { firebaseconfig } from 'src/firebase-config';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
@@ -32,7 +33,7 @@ library.add(fas, far, fab);
     AppRoutingModule,
     AngularFireModule.initializeApp(firebaseconfig),
     AngularFireAuthModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
   ],
   providers: [
     StatusBar,

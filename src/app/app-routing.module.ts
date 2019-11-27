@@ -36,6 +36,11 @@ const routes: Routes = [
   { path: 'oracoes',
     loadChildren: './oracoes/oracoes.module#OracoesPageModule'
   },
+  { path: 'teste-tabs', loadChildren: './teste-tabs/teste-tabs.module#TesteTabsPageModule' },
+  // { path: 'loja', loadChildren: './loja/loja.module#LojaPageModule' },
+  // { path: 'livros', loadChildren: './livros/livros.module#LivrosPageModule' },
+  // { path: 'agente', loadChildren: './agente/agente.module#AgentePageModule' },
+
 ];
 
 @NgModule({
