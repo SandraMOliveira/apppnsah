@@ -51,6 +51,8 @@ export class DizimistaPage implements OnInit {
     }
     this.toast.show('Cadastro realizado com sucesso!');
     this.router.navigate(['/dizimista']);
+    // this.formCliente.reset(new  Cliente());
+    this.formDizimista.reset();
   }
 
 }
