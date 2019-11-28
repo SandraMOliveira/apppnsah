@@ -13,6 +13,7 @@ export class ListaPedidoPage implements OnInit {
   constructor(private pedidoService: PedidoService) { }
 
   ngOnInit() {
+    console.log('*');
     this.pedidos = this.pedidoService.getAllAbertos();
   }
 

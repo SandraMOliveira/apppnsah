@@ -49,8 +49,8 @@ export class DizimistaPage implements OnInit {
     if (this.formDizimista.value) {
       this.dizimistaservice.criarCadastro(this.formDizimista.value);
     }
-    this.router.navigate(['dizimista']);
     this.toast.show('Cadastro realizado com sucesso!');
+    this.router.navigate(['/dizimista']);
   }
 
 }

@@ -21,6 +21,7 @@ export class ListaProdutosPage implements OnInit {
 
   // para listar os produtos
   ngOnInit() {
+    console.log('*');
     this.produtos = this.produtosService.getAll(null);
     // carregar categorias
     this.categorias = this.produtosService.getCategoriasAll();
@@ -36,7 +37,7 @@ export class ListaProdutosPage implements OnInit {
 
   // método para adicionar item no carrinho, quando clica no produto
   adicionarProduto(produtoKey: string) {
-    this.router.navigate(['/pedido/carrinho/novo-item/', produtoKey]);
+    this.router.navigate(['pedido/carrinho/novo-item/', produtoKey]);
   }
 
 }

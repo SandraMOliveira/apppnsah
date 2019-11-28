@@ -46,22 +46,46 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'usuarios',
+    path: 'pedido',
     children: [
       {
-        path: 'enderecos',
-        loadChildren: '../enderecos/lista-endereco/lista-endereco.module#ListaEnderecoPageModule'
+        path: 'carrinho/novo-item/:key',
+        loadChildren: '../pedidos/form-item-pedido/form-item-pedido.module#FormItemPedidoPageModule'
+      },
+      // rota para lista de produtos no carrinho
+      {
+        path: 'carrinho',
+        loadChildren: '../pedidos/lista-item-pedido/lista-item-pedido.module#ListaItemPedidoPageModule'
+      },
+      // rota para
+      {
+        path: 'forma-pagamento',
+        loadChildren: '../pedidos/form-pagamento/form-pagamento.module#FormPagamentoPageModule'
       },
       {
-        path: 'enderecos/novo',
-        loadChildren: '../enderecos/form-endereco/form-endereco.module#FormEnderecoPageModule'
-      },
-      {
-        path: 'enderecos/editar/:key',
-        loadChildren: '../enderecos/form-endereco/form-endereco.module#FormEnderecoPageModule'
+        path: 'produtos/:key',
+        loadChildren: '../pedidos/lista-produto-pedido/lista-produto-pedido.module#ListaProdutoPedidoPageModule'
       }
     ]
   },
+
+  // {
+  //   path: 'usuarios',
+  //   children: [
+  //     {
+  //       path: 'enderecos',
+  //       loadChildren: '../enderecos/lista-endereco/lista-endereco.module#ListaEnderecoPageModule'
+  //     },
+  //     {
+  //       path: 'enderecos/novo',
+  //       loadChildren: '../enderecos/form-endereco/form-endereco.module#FormEnderecoPageModule'
+  //     },
+  //     {
+  //       path: 'enderecos/editar/:key',
+  //       loadChildren: '../enderecos/form-endereco/form-endereco.module#FormEnderecoPageModule'
+  //     }
+  //   ]
+  // },
   // criando rota para carrinho
   {
     path: 'pedido',
