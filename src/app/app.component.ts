@@ -83,6 +83,7 @@ export class AppComponent {
       tipo: 'fas',
       color: 'azul'
     },
+    
 
   ];
 

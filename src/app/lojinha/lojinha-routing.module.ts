@@ -37,7 +37,8 @@ const routes: Routes = [
               import('../usuarios/perfil/perfil.module').then(m => m.PerfilPageModule)
           }
         ]
-      },
+      }
+      ,
       {
         path: '',
         redirectTo: '/lojinha/produtos',
@@ -46,46 +47,22 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'pedido',
+    path: 'usuarios',
     children: [
       {
-        path: 'carrinho/novo-item/:key',
-        loadChildren: '../pedidos/form-item-pedido/form-item-pedido.module#FormItemPedidoPageModule'
-      },
-      // rota para lista de produtos no carrinho
-      {
-        path: 'carrinho',
-        loadChildren: '../pedidos/lista-item-pedido/lista-item-pedido.module#ListaItemPedidoPageModule'
-      },
-      // rota para
-      {
-        path: 'forma-pagamento',
-        loadChildren: '../pedidos/form-pagamento/form-pagamento.module#FormPagamentoPageModule'
+        path: 'enderecos',
+        loadChildren: '../enderecos/lista-endereco/lista-endereco.module#ListaEnderecoPageModule'
       },
       {
-        path: 'produtos/:key',
-        loadChildren: '../pedidos/lista-produto-pedido/lista-produto-pedido.module#ListaProdutoPedidoPageModule'
+        path: 'enderecos/novo',
+        loadChildren: '../enderecos/form-endereco/form-endereco.module#FormEnderecoPageModule'
+      },
+      {
+        path: 'enderecos/editar/:key',
+        loadChildren: '../enderecos/form-endereco/form-endereco.module#FormEnderecoPageModule'
       }
     ]
   },
-
-  // {
-  //   path: 'usuarios',
-  //   children: [
-  //     {
-  //       path: 'enderecos',
-  //       loadChildren: '../enderecos/lista-endereco/lista-endereco.module#ListaEnderecoPageModule'
-  //     },
-  //     {
-  //       path: 'enderecos/novo',
-  //       loadChildren: '../enderecos/form-endereco/form-endereco.module#FormEnderecoPageModule'
-  //     },
-  //     {
-  //       path: 'enderecos/editar/:key',
-  //       loadChildren: '../enderecos/form-endereco/form-endereco.module#FormEnderecoPageModule'
-  //     }
-  //   ]
-  // },
   // criando rota para carrinho
   {
     path: 'pedido',
@@ -99,7 +76,7 @@ const routes: Routes = [
         path: 'carrinho',
         loadChildren: '../pedidos/lista-item-pedido/lista-item-pedido.module#ListaItemPedidoPageModule'
       },
-      // rota para
+      // rota para forma de pagamento
       {
         path: 'forma-pagamento',
         loadChildren: '../pedidos/form-pagamento/form-pagamento.module#FormPagamentoPageModule'

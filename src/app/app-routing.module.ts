@@ -36,12 +36,7 @@ const routes: Routes = [
   //        loadChildren: './pedidos/lista-produto-pedido/lista-produto-pedido.module#ListaProdutoPedidoPageModule' },
   // { path: 'lista-pedido', loadChildren: './pedidos/lista-pedido/lista-pedido.module#ListaPedidoPageModule' },
   // { path: 'form-pagamento', loadChildren: './pedidos/form-pagamento/form-pagamento.module#FormPagamentoPageModule' },
-  // { path: 'perfil', loadChildren: './usuarios/perfil/perfil.module#PerfilPageModule' },
-
-  // { path: 'teste-tabs', loadChildren: './teste-tabs/teste-tabs.module#TesteTabsPageModule' },
-  // { path: 'loja', loadChildren: './loja/loja.module#LojaPageModule' },
-  // { path: 'livros', loadChildren: './livros/livros.module#LivrosPageModule' },
-  // { path: 'agente', loadChildren: './agente/agente.module#AgentePageModule' },
+  // { path: 'perfil', loadChildren: './usuarios/perfil/perfil.module#PerfilPageModule' }, 
 
 ];
 

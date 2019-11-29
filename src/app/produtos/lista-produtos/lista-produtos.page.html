@@ -28,10 +28,10 @@
       <!-- <ion-avatar > -->
         <img [src]="produto.img" slot="start" *ngIf="produto.img" class="tamanhofoto" />
       <!-- </ion-avatar> -->
-      <ion-label text-wrap>
+      <ion-label class="ion-text-wrap">
         <h1>{{ produto.nome }}</h1>
         <h2>{{ produto.categoriaNome }}</h2>
-        <pre text-wrap>{{ produto.descricao }}</pre>
+        <pre class="ion-text-wrap">{{ produto.descricao }}</pre>
         <!-- span html -->
         <!-- <span>{{ produto.preco | currency: 'BRL'}}</span> -->
         <app-valor [valor]="produto.preco"></app-valor>
