@@ -87,6 +87,10 @@ export class UsuariosService {
 
   }
 
+  getAuth(){
+    return this.afAuth.auth;
+  }
+
 }
 
 

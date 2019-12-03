@@ -25,8 +25,10 @@
 
     <!--  mostrando produto por produto,  -->
     <ion-item *ngFor="let produto of produtos | async" (click)="adicionarProduto(produto.key)">
+      <ion-card >
       <!-- <ion-avatar > -->
-        <img [src]="produto.img" slot="start" *ngIf="produto.img" class="tamanhofoto" />
+        <img [src]="produto.img" />
+        <!-- slot="start" *ngIf="produto.img" class="tamanhofoto" -->
       <!-- </ion-avatar> -->
       <ion-label class="ion-text-wrap">
         <h1>{{ produto.nome }}</h1>
@@ -36,6 +38,7 @@
         <!-- <span>{{ produto.preco | currency: 'BRL'}}</span> -->
         <app-valor [valor]="produto.preco"></app-valor>
       </ion-label>
+    </ion-card>
     </ion-item>
   </ion-list>
 
