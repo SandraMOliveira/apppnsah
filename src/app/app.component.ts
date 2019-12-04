@@ -16,7 +16,7 @@ export class AppComponent {
     {
       title: 'Home',
       url: '/home',
-      icon: 'newspaper',
+      icon: 'home',
       tipo: 'fas',
       color: 'azul'
     },

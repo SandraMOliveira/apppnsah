@@ -11,6 +11,7 @@ import { ToastService } from './../../core/shared/toast.service';
   styleUrls: ['./form-item-pedido.page.scss'],
 })
 export class FormItemPedidoPage implements OnInit {
+  [x: string]: any;
   produto: any = {}
   form: FormGroup;
   total: number = 0
@@ -81,17 +82,25 @@ export class FormItemPedidoPage implements OnInit {
 
     }
 
-    onSubmit(){
-      if (this.form.valid) {
-        // insere o valor do formulário
-        this.carrinhoService.insert(this.form.value)
-        // se deu certo (then)
-        .then( () => {
-          this.toast.show('Produto adicionado com sucesso!!!');
-          this.router.navigate(['/lojinha/produtos']);
-        })
-      }
-
+    onSubmit() {
+      this.afAuth.auth.onAuthStateChanged(user => {
+        if (!user) {
+          this.toast.show('É necessário efetuar Login ou Criar uma conta !!!');
+          this.router.navigate(['/login'])
+        } else {
+          // insere o valor do formulário
+          if (this.form.valid) {
+            this.carrinhoService.insert(this.form.value)
+             // se deu certo (then)
+              .then(() => {
+                this.toast.show('Produto adicionado com sucesso !!!');
+                this.router.navigate(['/tabs/produtos']);
+              });
+          }
+        }
+      });
     }
+
+
 
 }

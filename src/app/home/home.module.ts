@@ -18,8 +18,8 @@ library.add(fas, far, fab);
   imports: [
     CommonModule,
     FormsModule,
-    SharedModule, 
-    FontAwesomeModule,  
+    SharedModule,
+    FontAwesomeModule,
     RouterModule.forChild([
       {
         path: '',
