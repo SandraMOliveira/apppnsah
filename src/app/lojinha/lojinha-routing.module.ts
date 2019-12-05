@@ -1,6 +1,7 @@
 import { LojinhaPage } from './lojinha.page';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
+// import { PedidosGuardGuard } from '../pedidos/shared/pedidos-guard.guard';
 
 const routes: Routes = [
   {
@@ -70,6 +71,7 @@ const routes: Routes = [
       {
         path: 'carrinho/novo-item/:key',
         loadChildren: '../pedidos/form-item-pedido/form-item-pedido.module#FormItemPedidoPageModule'
+        // canActivate: [PedidosGuardGuard]
       },
       // rota para lista de produtos no carrinho
       {

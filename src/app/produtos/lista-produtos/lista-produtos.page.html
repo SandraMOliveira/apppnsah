@@ -27,7 +27,7 @@
     <ion-item *ngFor="let produto of produtos | async" (click)="adicionarProduto(produto.key)">
       <ion-card >
       <!-- <ion-avatar > -->
-        <img [src]="produto.img" />
+        <img [src]="produto.img" size="2x" />
         <!-- slot="start" *ngIf="produto.img" class="tamanhofoto" -->
       <!-- </ion-avatar> -->
       <ion-label class="ion-text-wrap">

@@ -7,16 +7,16 @@ import { UsuariosService } from './shared/usuarios.service';
 })
 export class AuthGuard implements CanActivate {
 
-  constructor( private authService: UsuariosService,
-    private router: Router ) { }
+  constructor(private authService: UsuariosService,
+    private router: Router) { }
 
-    canActivate(): Promise<boolean> {
-return new Promise(resolve => {
-this.authService.getAuth().onAuthStateChanged(user => {
- if (!user) this.router.navigate(['login']);
- resolve(user ? true : false);
-})
-});
-}
+  canActivate(): Promise<boolean> {
+    return new Promise(resolve => {
+      this.authService.getAuth().onAuthStateChanged(user => {
+        if (!user) {this.router.navigate(['login'])} ;
+        resolve(user ? true : false);
+      });
+    });
+  }
 
 }

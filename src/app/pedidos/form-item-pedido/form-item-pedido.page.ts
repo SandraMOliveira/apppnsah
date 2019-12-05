@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ToastService } from './../../core/shared/toast.service';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-form-item-pedido',
@@ -19,7 +20,8 @@ export class FormItemPedidoPage implements OnInit {
   constructor(private formBuilder: FormBuilder, private route: ActivatedRoute,
               private router: Router, private produtosService: ProdutosService,
               private carrinhoService: CarrinhoService,
-              private toast: ToastService ) { }
+              private toast: ToastService,
+              private afAuth: AngularFireAuth) { }
 
   ngOnInit() {
     this.criarFormulario();
@@ -94,7 +96,7 @@ export class FormItemPedidoPage implements OnInit {
              // se deu certo (then)
               .then(() => {
                 this.toast.show('Produto adicionado com sucesso !!!');
-                this.router.navigate(['/tabs/produtos']);
+                this.router.navigate(['/lojinha/produtos']);
               });
           }
         }
