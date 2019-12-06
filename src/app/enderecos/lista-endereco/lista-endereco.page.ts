@@ -43,7 +43,7 @@ export class ListaEnderecoPage implements OnInit {
   }
 
   editar(key: string) {
-    this.router.navigate(['/usuarios/enderecos/editar', key]);
+    this.router.navigate(['lojinha/usuarios/enderecos/editar', key]);
   }
 
   remover(endereco: any) {

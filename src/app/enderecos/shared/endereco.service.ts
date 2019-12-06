@@ -1,10 +1,10 @@
 import { map } from 'rxjs/operators';
-import { FirebasePath } from './../../core/shared/firebase-path';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { Injectable } from '@angular/core';
 import { resolve } from 'url';
 import { reject } from 'q';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { FirebasePath } from 'src/app/core/firebase-path';
 
 @Injectable({
   providedIn: 'root'

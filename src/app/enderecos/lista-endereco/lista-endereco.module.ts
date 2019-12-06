@@ -19,7 +19,7 @@ const routes: Routes = [
     FormsModule,
     SharedModule,
     RouterModule.forChild(routes)
-  ],
+  ],  
   declarations: [ListaEnderecoPage]
 })
 export class ListaEnderecoPageModule {}
