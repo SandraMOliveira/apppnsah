@@ -17,8 +17,10 @@ export class FormItemPedidoPage implements OnInit {
   form: FormGroup;
   total: number = 0
 
-  constructor(private formBuilder: FormBuilder, private route: ActivatedRoute,
-              private router: Router, private produtosService: ProdutosService,
+  constructor(private formBuilder: FormBuilder, 
+              private route: ActivatedRoute,
+              private router: Router, 
+              private produtosService: ProdutosService,
               private carrinhoService: CarrinhoService,
               private toast: ToastService,
               private afAuth: AngularFireAuth) { }

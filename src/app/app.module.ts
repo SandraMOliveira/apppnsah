@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -31,14 +32,14 @@ library.add(fas, far, fab);
     FontAwesomeModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    AngularFireModule.initializeApp(firebaseconfig),
+    AngularFireModule.initializeApp(firebaseconfig),    
     AngularFireAuthModule,
     AngularFireDatabaseModule,
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy } , DatePipe
   ],
   bootstrap: [AppComponent]
 })

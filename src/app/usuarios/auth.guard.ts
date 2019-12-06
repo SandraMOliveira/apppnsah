@@ -8,7 +8,7 @@ import { UsuariosService } from './shared/usuarios.service';
 export class AuthGuard implements CanActivate {
 
   constructor(private authService: UsuariosService,
-    private router: Router) { }
+              private router: Router) { }
 
   canActivate(): Promise<boolean> {
     return new Promise(resolve => {

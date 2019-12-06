@@ -80,7 +80,7 @@ const routes: Routes = [
       },
       // rota para forma de pagamento
       {
-        path: 'forma-pagamento',
+        path: 'form-pagamento',
         loadChildren: '../pedidos/form-pagamento/form-pagamento.module#FormPagamentoPageModule'
       },
       {

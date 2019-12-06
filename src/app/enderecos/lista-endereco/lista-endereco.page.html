@@ -1,9 +1,63 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar color="header">
     <ion-title>lista-endereco</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
+<ion-header >
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title class="font-family">Lista de Endereços</ion-title>
+</ion-toolbar>
+</ion-header>
 <ion-content>
 
+</ion-content>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Endereços</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- ngfor vai trazer os item e compor o endereço com todos os dados -->
+<!-- recebe de endereços e é assincrono -->
+<!-- chama o método(getEnderecoText) e passa o parametro (endereco) -->
+<!-- sliding contéudo listado na tela poder ser arrastado -->
+<!-- click vai para o -->
+<ion-content padding>
+  <ion-list>
+    <ion-item-sliding *ngFor="let endereco of enderecos | async">
+      <ion-item (click)="setEnderecoSelecionado(endereco)">
+        <ion-label text-wrap>
+          {{ getEnderecoText(endereco) }}
+        </ion-label>
+      </ion-item>
+
+      <!-- icones que aparecem no final do endereço , quando arrasta -->
+      <!-- side (posição) aparecer no final "end" -->
+      <!-- trash icone lixeira -->
+      <!-- não mostra mas vem a key do endereço -->
+      <ion-item-options side="end">
+        <ion-item-option color="secondary" (click)="editar(endereco.key)">
+          <ion-icon name="create"></ion-icon>
+        </ion-item-option>
+        <ion-item-option color="danger" (click)="remover(endereco)">
+          <ion-icon name="trash"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+      
+    </ion-item-sliding>
+  </ion-list>
+
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="primary" [routerLink]="['/usuarios/enderecos/novo']">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
