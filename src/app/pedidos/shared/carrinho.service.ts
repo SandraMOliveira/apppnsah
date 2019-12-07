@@ -12,17 +12,18 @@ export class CarrinhoService {
   constructor(private db: AngularFireDatabase,
               private afAuth: AngularFireAuth) { }
 
-              // ${this.afAuth.auth.currentUser.uid}
-  getCarrinhoProdutosRef(){
+  // ${this.afAuth.auth.currentUser.uid}
+  // const path = `${FirebasePath.CARRINHO}${this.afAuth.auth.currentUser.uid}/${FirebasePath.PRODUTOS}`;
+  getCarrinhoProdutosRef() {
     const path = `${FirebasePath.CARRINHO}/${FirebasePath.PRODUTOS}`;
     return this.db.list(path);
   }
 
-  insert(itemProduto:any) {
+  insert(itemProduto: any) {
     return this.getCarrinhoProdutosRef().push(itemProduto);
   }
 
-  carrinhoPossuiItens(){
+  carrinhoPossuiItens() {
     // faz no caminho com Id do usuário
     return this.getCarrinhoProdutosRef().snapshotChanges().pipe(
       map(changes => {
@@ -32,45 +33,45 @@ export class CarrinhoService {
     )
   }
 
-  calcularTotal(preco: number, quantidade: number){
+  calcularTotal(preco: number, quantidade: number) {
     return preco * quantidade;
 
   }
 
-  update(key: string, quantidade: number, total: number){
+  update(key: string, quantidade: number, total: number) {
     // retorna (tem uma promisse cath ou )
-    return this.getCarrinhoProdutosRef().update(key, { quantidade: quantidade, total: total});
+    return this.getCarrinhoProdutosRef().update(key, { quantidade: quantidade, total: total });
   }
 
-  remove(key: string){
+  remove(key: string) {
     return this.getCarrinhoProdutosRef().remove(key);
   }
-  
-    // pipe é uma sequencia de comandos, dentro desse pipe pode ter mais de um comando
-    // map para mapear os dados
 
-  getAll(){
-   return this.getCarrinhoProdutosRef().snapshotChanges().pipe(
-     map(changes => {
-       return changes.map(m => ({key: m.payload.key, ...m.payload.val() }) )
-     })
-   )
-  }
+  // pipe é uma sequencia de comandos, dentro desse pipe pode ter mais de um comando
+  // map para mapear os dados
 
-    // reduce tem 2 parametros, vai navegar na outras posições e faz a soma
-  getTotalPedido(){
+  getAll() {
     return this.getCarrinhoProdutosRef().snapshotChanges().pipe(
       map(changes => {
-        return changes
-        .map( (m: any) => (m.payload.val().total))
-        .reduce( (prev: number, current: number) => {
-          return prev + current;
-        })
+        return changes.map(m => ({ key: m.payload.key, ...m.payload.val() }))
       })
     )
   }
 
-  clear(){
+  // reduce tem 2 parametros, vai navegar na outras posições e faz a soma
+  getTotalPedido() {
+    return this.getCarrinhoProdutosRef().snapshotChanges().pipe(
+      map(changes => {
+        return changes
+          .map((m: any) => (m.payload.val().total))
+          .reduce((prev: number, current: number) => {
+            return prev + current;
+          })
+      })
+    )
+  }
+
+  clear() {
     return this.getCarrinhoProdutosRef().remove();
 
   }
